@@ -1,5 +1,4 @@
-import { Controller, Get ,Post ,Param ,Body , Put , Delete, Req, ParseIntPipe, Patch } from '@nestjs/common';
-import { Request ,response,Response } from 'express';
+import { Controller, Get ,Post ,Param ,Body , Delete, Req, ParseIntPipe, Patch } from '@nestjs/common';
 import { UserService } from './user.service.js';
 import { createUserDto } from './dto/create-user.dto.js';
 import { updateUserDto } from './dto/update-user.dto.js';

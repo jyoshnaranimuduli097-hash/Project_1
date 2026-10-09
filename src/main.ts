@@ -2,9 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module.js';
 import { ConfigService } from '@nestjs/config';
 import { ValidationPipe } from '@nestjs/common';
+import  cookieParser from 'cookie-parser'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+// Use Cookie-Parser as Middleware
+app.use(cookieParser())
 // Integrate Validation Pipe
 app.useGlobalPipes(new ValidationPipe({
   whitelist:true,
